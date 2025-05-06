@@ -1,6 +1,7 @@
 # AI Voice Translator
 
 Este proyecto permite traducir el audio grabado por un micrófono en tiempo real utilizando la API de Whisper para transcripción y ElevenLabs para convertir el texto traducido a audio. 
+![imagen](https://github.com/user-attachments/assets/e749ed5f-001f-4965-b280-5bb5ee4d4b3e)
 
 ## Requisitos
 
