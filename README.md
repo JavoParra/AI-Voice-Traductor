@@ -17,7 +17,7 @@ Este proyecto permite traducir el audio grabado por un micrófono en tiempo real
 Puedes instalar las dependencias necesarias ejecutando:
 
 ```bash
-pip install gradio whisper translate python-dotenv elevenlabs
+pip pip install -r requirements.txt
 ```
 
 ## Configuración
@@ -35,7 +35,7 @@ ELEVENLABS_API_KEY=tu_clave_aqui
 
 ## Cómo usar
 
-1. Graba un archivo de audio en formato `.mp3`, `.wav`, o cualquier otro formato compatible con Gradio.
+1. Graba un mensaje usando tu microfono , o cualquier otro archivo de audio en formato `.mp3`, `.wav` compatible con Gradio.
 2. El sistema transcribirá el audio usando **Whisper** (modelo local).
 3. Luego, traducirá el texto a inglés usando la API de **Translate**.
 4. Finalmente, convertirá el texto traducido a audio usando **ElevenLabs** y lo guardará en un archivo de salida.
@@ -45,10 +45,11 @@ ELEVENLABS_API_KEY=tu_clave_aqui
 Para ejecutar la aplicación, simplemente corre el siguiente comando en tu terminal:
 
 ```bash
-python app.py
+python -u "main.py"
 ```
+Abre el navegador en la URL proporcionada (por defecto: http://127.0.0.1:7860).
 
-Esto abrirá la interfaz de **Gradio** en tu navegador donde podrás subir un archivo de audio y ver el proceso de traducción y conversión a voz en acción.
+Esto abrirá la interfaz de **Gradio** en tu navegador donde podrás grabar o subir un archivo de audio y ver el proceso de traducción y conversión a voz en acción.
 
 ## Estructura del Código
 
@@ -60,8 +61,8 @@ Esto abrirá la interfaz de **Gradio** en tu navegador donde podrás subir un ar
 ## Archivos
 
 - **.env**: Debe contener tu clave de API de ElevenLabs.
-- **app.py**: El archivo principal con el código de la aplicación.
-- **output.mp3**: El archivo de audio traducido generado por el sistema.
+- **main.py**: El archivo principal con el código de la aplicación.
+- **en.mp3**: El archivo de audio traducido generado por el sistema.
 
 ## Notas
 
